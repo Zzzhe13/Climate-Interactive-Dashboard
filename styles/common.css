@@ -63,7 +63,7 @@ body::-webkit-scrollbar {
 body{
     font-size: 100%;
     height: 100%;
-    background-color: #081832;
+    background-color: #e1e1d0;
 }
 a:hover{
     text-decoration: none;
@@ -84,25 +84,29 @@ a:hover{
 .header{
     width: 100%;
     height: 80px;
-    background-color: #030829;
+    background-color: #e1e1d0;
 
 }
-.header_center{
+.header_center {
     width: 30%;
     margin: 0px auto;
-    color: #FFFFff;
+    color: #e1e1d0; 
     text-align: center;
     height: 80px;
     background-image: url("../images/logoBg.png");
     background-size: 100% 100%;
-    font-family: "微软雅黑"!important;
-
-
+    font-family: "微软雅黑" !important;
 }
+
 .header_center h2{
    margin-top: 16px !important;
    font-size: 22px !important;
-
+}
+.header_center>h2>a{
+    color: #0c0c0c;
+    /*display: inline-block;*/
+    /*padding: 0 15px 0 5px;*/
+    font-size: 30px;
 }
 .color_font{
     color: #e8f7fe !important;
@@ -142,10 +146,10 @@ a:hover{
 
 }
 .nav>ul>li:hover{
-    box-shadow: -10px 0px 15px #034c6a inset, /*å·¦è¾¹é˜´å½±*/
-    0px -10px 15px #034c6a inset, /*ä¸Šè¾¹é˜´å½±*/
-    10px 0px 15px #034c6a inset, /*å³è¾¹é˜´å½±*/
-    0px 10px 15px #034c6a inset;
+    box-shadow: -10px 0px 15px #5d5d3c inset, /*å·¦è¾¹é˜´å½±*/
+    0px -10px 15px #5d5d3c inset, /*ä¸Šè¾¹é˜´å½±*/
+    10px 0px 15px #5d5d3c inset, /*å³è¾¹é˜´å½±*/
+    0px 10px 15px #5d5d3c inset;
 
     box-sizing: border-box;
 }
@@ -158,10 +162,10 @@ a:hover{
     margin-right: 5px;
 }
 .nav>ul>li>a{
-    color: #ffffff;
+    color: #0c0c0c;
     /*display: inline-block;*/
     /*padding: 0 15px 0 5px;*/
-    font-size: 14px;
+    font-size: 20px;
 }
 /*.nav>ul>li:hover .li_ul{*/
     /*display: block;*/
@@ -169,7 +173,7 @@ a:hover{
 
 .li_ul{
     position: absolute;
-    background-color: #030829;
+    background-color: #e1e1d0;
     width: 100%;
     /*border-top:4px solid #4b8df8;*/
     display: none;
@@ -180,10 +184,10 @@ a:hover{
     line-height: 40px !important;
 }
 .li_ul li:hover{
-    background-color: #4b8df8;
+    background-color: #e1e1d0;
 }
 .li_ul li a{
-    color: #ffffff;
+    color: #e1e1d0;
     font-size: 13px;
 }
 
@@ -213,17 +217,17 @@ a:hover{
     background-image: url("../img/nav_9.png");
 }
 .nav_active{
-    border-bottom: 4px solid #4b8df8;
-    box-shadow: -10px 0px 15px #034c6a inset, /*å·¦è¾¹é˜´å½±*/
-    0px -10px 15px #034c6a inset, /*ä¸Šè¾¹é˜´å½±*/
-    10px 0px 15px #034c6a inset, /*å³è¾¹é˜´å½±*/
-    0px 10px 15px #034c6a inset;
+    border-bottom: 4px solid #5d5d3c;
+    box-shadow: -10px 0px 15px #5d5d3c inset, /*å·¦è¾¹é˜´å½±*/
+    0px -10px 15px #5d5d3c inset, /*ä¸Šè¾¹é˜´å½±*/
+    10px 0px 15px #5d5d3c inset, /*å³è¾¹é˜´å½±*/
+    0px 10px 15px #5d5d3c inset;
 
     box-sizing: border-box;
 }
 .con{
     width: 100%;
-    background-color: #081832;
+    background-color: #ebebe0;
     padding-top: 20px;
     padding-bottom: 20px;
 }

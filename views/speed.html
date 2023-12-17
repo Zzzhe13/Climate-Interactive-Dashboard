@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- 指定网页字符编码 -->
+    <meta charset="UTF-8" />
+    <!-- 适配移动端 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Climate可视化</title>
+    <script src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/echarts.min.js"></script>
+    <link href="../styles/common.css" rel="stylesheet" />
+    <script src="../scripts/Plugin/jquery-3.3.1.min.js"></script>
+
+    <script src="../scripts/common.js"></script>
+
+    <link rel="stylesheet" href="../scripts/speed/css/index.css" />
+  </head>
+  <body>
+    <!--顶部-->
+    <header class="header left">
+      <div class="left nav">
+        <ul>
+          <li><i class="nav_1"></i><a href="temp.html">温度</a></li>
+          <li><i class="nav_2"></i><a href="humidity.html">湿度</a></li>
+          <li class="nav_active">
+            <i class="nav_3"></i><a href="speed.html">风速</a>
+          </li>
+        </ul>
+      </div>
+      <div class="header_center left" style="position: relative">
+        <h2><a>中国气候情况</a></h2>
+      </div>
+      <div class="right nav text_right">
+        <ul>
+          <li><i class="nav_1"></i><a href="quality.html">空气质量</a></li>
+          <li><i class="nav_2"></i><a href="rainfall.html">降水量 </a></li>
+          <li><i class="nav_3"></i><a href="index.html">实时天气 </a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 内容部分 -->
+    <div class="con">
+      <div id="title">
+        <span id="selected-year"></span> 年全国各省风速可视化
+      </div>
+
+      <div id="c_year">
+        <input type="" text id="year-input" />
+        <button id="year-button">选择年份</button>
+        <ul id="year-list"></ul>
+      </div>
+
+      <div id="left1"></div>
+
+      <div id="center"></div>
+
+      <div id="radar"></div>
+
+      <script src="https://registry.npmmirror.com/echarts/5.4.3/files/dist/echarts.min.js"></script>
+      <script src="../scripts/speed/js/data.js"></script>
+      <script src="../scripts/speed/js/echarts.min.js"></script>
+      <script src="../scripts/speed/js/china.js"></script>
+      <script src="../scripts/speed/js/center.js"></script>
+      <script src="../scripts/speed/js/left1.js"></script>
+      <script src="../scripts/speed/js/radar.js"></script>
+      <script src="../scripts/speed/js/year.js"></script>
+    </div>
+  </body>
+</html>

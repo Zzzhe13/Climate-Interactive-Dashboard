@@ -2,156 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>数据可视化demo</title>
+    <title>Climate可视化</title>
     <link href="../styles/common.css" rel="stylesheet">
     <script src="../scripts/Plugin/jquery-3.3.1.min.js"></script>
     <script src="../scripts/Plugin/echarts.min.js"></script>
     <script src="../scripts/Plugin/bmap.min.js"></script>
-    <script src="http://api.map.baidu.com/api?v=2.0&ak=LelFSt6BfykGf8m3PB5zr8LaXAG2cMg6"></script>
-    <meta http-equiv="refresh" content="50;url='https://blog.csdn.net/qq_31766533/article/details/119274641'">
-    <script src="../scripts/common.js"></script>
-    <script src="../scripts/index.js"></script>
     <script src="../scripts/Plugin/laydate/laydate.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/weather.css">
+    <script src="../scripts/weather.js" defer></script>
 </head>
 <body>
 <!--顶部-->
-<header class="header left">
+<header class="header">
     <div class="left nav">
         <ul>
-            <li class="nav_active"><i class="nav_1"></i><a href="index.html">采集概况</a> </li>
-            <li><i class="nav_2"></i><a href="quota.html">指标分析</a> </li>
-            <li><i class="nav_3"></i><a href="trend.html">趋势分析</a> </li>
-            <li><i class="nav_4"></i><a href="chronic.html">慢病病人列表</a> </li>
-            </ul>
+            <li ><i class="nav_1"></i><a href="temp.html">温度</a> </li>
+            <li ><i class="nav_2"></i><a href="humidity.html">湿度</a> </li>
+            <li ><i class="nav_3"></i><a href="speed.html">风速</a> </li>
+        </ul>
     </div>
     <div class="header_center left" style="position:relative">
         
-        <h2><strong><a href="https://gitee.com/iGaoWei/big-data-view">医院大数据展示</a></strong></h2>
+        <h2><a>中国气候情况</a></h2>
 
     </div>
     <div class="right nav text_right">
         <ul>
-
+            <li ><i class="nav_1"></i><a href="quality.html">空气质量</a> </li>
+            <li ><i class="nav_2"></i><a href="rainfall.html">降水量 </a> </li>
+            <li class="nav_active"><i class="nav_3"></i><a href="index.html">实时天气 </a> </li>
         </ul>
     </div>
-
 </header>
+
 <!--内容部分-->
-<div class="con left">
-    <!--数据总概-->
-    <div class="con_div">
-        <div class="con_div_text left">
-            <div class="con_div_text01 left">
-                <img src="../images/info_1.png" class="left text01_img"/>
-                <div class="left text01_div">
-                    <p>总采集数据量(G)</p>
-                    <p>1235</p>
-                </div>
-            </div>
-            <div class="con_div_text01 right">
-                <img src="../images/info_2.png" class="left text01_img"/>
-                <div class="left text01_div">
-                    <p>当月采集数据量(G)</p>
-                    <p>235</p>
-                </div>
-            </div>
-        </div>
-        <div class="con_div_text left">
-            <div class="con_div_text01 left">
-                <img src="../images/info_3.png" class="left text01_img"/>
-                <div class="left text01_div">
-                    <p>总门诊数(人)</p>
-                    <p class="sky">12356</p>
-                </div>
-            </div>
-            <div class="con_div_text01 right">
-                <img src="../images/info_4.png" class="left text01_img"/>
-                <div class="left text01_div">
-                    <p>当月门诊数(人)</p>
-                    <p class="sky">12356</p>
-                </div>
-            </div>
-        </div>
-        <div class="con_div_text left">
-
-            <div class="con_div_text01 left">
-                <img src="../images/info_5.png" class="left text01_img"/>
-                <div class="left text01_div">
-                    <p>总住院数(人)</p>
-                    <p class="org">12356</p>
-                </div>
-            </div>
-            <div class="con_div_text01 right">
-                <img src="../images/info_6.png" class="left text01_img"/>
-                <div class="left text01_div">
-                    <p>当月住院数(人)</p>
-                    <p class="org">12356</p>
-                </div>
-            </div>
-        </div>
+<div class="card">
+    <div class="search">
+        <input type="text" class="search-bar" placeholder="Search">
+        <button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1.5em"
+            width="1.5em" xmlns="http://www.w3.org/2000/svg">
+            <path
+            d="M909.6 854.5L649.9 594.8C690.2 542.7 712 479 712 412c0-80.2-31.3-155.4-87.9-212.1-56.6-56.7-132-87.9-212.1-87.9s-155.5 31.3-212.1 87.9C143.2 256.5 112 331.8 112 412c0 80.1 31.3 155.5 87.9 212.1C256.5 680.8 331.8 712 412 712c67 0 130.6-21.8 182.7-62l259.7 259.6a8.2 8.2 0 0 0 11.6 0l43.6-43.5a8.2 8.2 0 0 0 0-11.6zM570.4 570.4C528 612.7 471.8 636 412 636s-116-23.3-158.4-65.6C211.3 528 188 471.8 188 412s23.3-116.1 65.6-158.4C296 211.3 352.2 188 412 188s116.1 23.2 158.4 65.6S636 352.2 636 412s-23.3 116.1-65.6 158.4z">
+            </path>
+        </svg></button>
     </div>
-    <!--统计分析图-->
-    <div class="div_any">
-        <div class="left div_any01">
-            <div class="div_any_child">
-                <div class="div_any_title"><img src="../images/title_1.png">各医院采集数据量</div>
-                <p id="pieChart1" class="p_chart"></p>
-            </div>
-            <div class="div_any_child">
-                <div class="div_any_title"><img src="../images/title_2.png">各医院门诊住院费用</div>
-                <p id="histogramChart" class="p_chart"></p>
-            </div>
+    <div class="weather loading">
+        <h2 class="city"> 。。。</h2>
+        <h1 class="temp">°C</h1>
+        <div class="flex">
+        <img src="https://openweathermap.org/img/wn/04n.png" alt="" class="icon" />
+        <div class="description"></div>
         </div>
-        <div class="div_any02 left ">
-            <div class="div_any_child div_height">
-                <div class="div_any_title any_title_width"><img src="../images/title_0.png">厦门市地图 </div>
-                <div id="mapChart" style="width:97.5%;height:95%;display: inline-block;padding-left: 1.25%;padding-top:2.2%"></div>
-            </div>
-        </div>
-        <div class="right div_any01">
-            <div class="div_any_child">
-                <div class="div_any_title"><img src="../images/title_3.png">数据采集条数(当日)</div>
-                <p id="lineChart" class="p_chart"></p>
-            </div>
-            <div class="div_any_child">
-                <div class="div_any_title"><img src="../images/title_4.png">就诊人数(当日)</div>
-                <p id="lineChart2" class="p_chart"></p>
-            </div>
-        </div>
-    </div>
-
-    <div id="el-dialog" class="">
-        <div class="xc_layer"></div>
-        <div class="popBox" id="printView">
-            <div class="ttBox"><span class="tt" id="reportTitle">第一医院</span><img src="../images/close.png" style="width: 30px;float: right;cursor: pointer;" title="关闭弹窗" class="close"/></div>
-            <div class="txtBox" id="el-dialog_body">
-             <div style="height:100%;width: 98%;margin-left: 1%;">
-               <div class="left div_any01" style="width: 64%;">
-                   <div class="div_any_child">
-                       <div class="div_any_title"><div type="text" class="demo-input" id="date1" style="display: inline-block;cursor: pointer;margin-right: 16px;"></div><img src="../images/title_4.png">门诊住院人次</div>
-                       <p id="lineChart3" class="p_chart"></p>
-                   </div>
-                   <div class="div_any_child">
-                       <div class="div_any_title"><div type="text" class="demo-input" id="date2" style="display: inline-block;cursor: pointer;margin-right: 16px;"></div><img src="../images/title_7.png">医疗费用</div>
-                       <p id="lineChart4" class="p_chart"></p>
-                   </div>
-               </div>
-               <div class="left div_any01"  style="width: 32%;">
-                   <div class="div_any_child">
-                       <div class="div_any_title"><div type="text" class="demo-input" id="date3" style="display: inline-block;cursor: pointer;margin-right: 16px;"></div><img src="../images/title_18.png">病人年龄段分布</div>
-                       <p id="pieChart2" class="p_chart"></p>
-                   </div>
-                   <div class="div_any_child">
-                       <div class="div_any_title"><div type="text" class="demo-input" id="date4" style="display: inline-block;cursor: pointer;margin-right: 16px;"></div><img src="../images/title_20.png">医疗费用组成</div>
-                       <p id="pieChart3" class="p_chart"></p>
-                   </div>
-               </div>
-
-             </div>
-            </div>
-        </div>
-    </div>
-
+        <div class="visibility">能见度: %</div>
+        <div class="humidity">湿度: %</div>
+        <div class="wind">风速 : km/h</div>
 </div>
+    
 </body>
 </html>
