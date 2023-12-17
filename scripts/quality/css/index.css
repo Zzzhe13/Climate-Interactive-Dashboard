@@ -1,0 +1,140 @@
+body {
+    font-size: 100%;
+    height: 100%;
+    background-color: #ebebe0;
+}
+
+#title2 {
+    position: absolute;
+    top: 160%;
+    left: 35%;
+    width: 30%;
+    height: 6%;
+    /* background: #555; */
+    color: black;
+    font-size: 30px;
+    /* 弹性盒子布局 */
+    display: flex;
+    /* 水平剧中*/
+    justify-content: center;
+    /* 垂直居中*/
+    align-items: center;
+}
+#title {
+    position: absolute;
+    top: 12%;
+    left: 30%;
+    width: 40%;
+    height: 6%;
+    /* background: #555; */
+    color: black;
+    font-size: 30px;
+    /* 弹性盒子布局 */
+    display: flex;
+    /* 水平剧中*/
+    justify-content: center;
+    /* 垂直居中*/
+    align-items: center;
+}
+
+#c_year {
+    position: absolute;
+    top: 14%;
+    left: 10%;
+    width: 30%;
+    height: 5%;
+}
+#year-input {
+    width: 150px; /* Set the width to your desired value */
+    height: 30px; /* Set the height to your desired value */
+}
+#year-button {
+    width: 150px; /* Set the width to your desired value */
+    height: 30px; /* Set the height to your desired value */
+}
+#year-list{
+    display:none;
+    list-style:none;
+    padding:0;
+    margin:0;
+    position:absolute;
+    background-color: #fff;
+    border:1px solid #ccc;
+    z-index: 1000; /* Adjust this value as needed */
+}
+#year-list li{
+    padding :5px;
+    cursor:pointer;
+}
+#year-list li:hover{
+    background-color: #eee;
+}
+
+#province {
+    position: absolute;
+    top: 160%;
+    left: 10%;
+    width: 30%;
+    height: 5%;
+}
+#province-input {
+    width: 150px; /* Set the width to your desired value */
+    height: 30px; /* Set the height to your desired value */
+}
+#province-button {
+    width: 150px; /* Set the width to your desired value */
+    height: 30px; /* Set the height to your desired value */
+}
+#province-list{
+    display:none;
+    list-style:none;
+    padding:0;
+    margin:0;
+    position:absolute;
+    background-color: #fff;
+    border:1px solid #ccc;
+    z-index: 1000; /* Adjust this value as needed */
+}
+#province-list li{
+    padding :5px;
+    cursor:pointer;
+}
+#province-list li:hover{
+    background-color: #eee;
+}
+
+#map1 {
+    position: absolute;
+    top: 18%;
+    left: 25%;
+    width: 60%;
+    height: 60%;
+    background-color: #ebebe0;
+}
+
+#scatter {
+    background-color: #ebebe0;
+    width: 80%;
+    height: 50%;
+    position: absolute;
+    top: 80%;
+    left: 22%;
+}
+
+#time {
+    background-color: #ebebe0;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    top: 170%;
+    left: 75%;
+}
+
+#Parallel {
+    background-color: #ebebe0;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 170%;
+    left: 5%;
+}
